@@ -19,6 +19,5 @@ export class RickMortyService {
 
   getDetails(id: number) {
     return this._http.get<Character>(`${environment.baseAPI}/${id}`)
-    .pipe(catchError((err) => err));
   }
 }

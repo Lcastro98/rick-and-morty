@@ -12,6 +12,8 @@ import { LayoutComponent } from './components/main/layout/layout.component';
 import { FooterComponent } from './components/main/footer/footer.component';
 import { CharactersComponent } from './components/characters/characters.component';
 import { RickandmortyListComponent } from './components/rickandmorty/rickandmorty-list/rickandmorty-list.component';
+import { RickandmortyDetailsComponent } from './components/rickandmorty/rickandmorty-details/rickandmorty-details.component';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 
 
@@ -23,7 +25,8 @@ import { RickandmortyListComponent } from './components/rickandmorty/rickandmort
     LayoutComponent,
     FooterComponent,
     CharactersComponent,
-    RickandmortyListComponent
+    RickandmortyListComponent,
+    RickandmortyDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,8 @@ import { RickandmortyListComponent } from './components/rickandmorty/rickandmort
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    InfiniteScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]
