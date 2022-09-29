@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './components/main/layout/layout.component';
 import { CharactersComponent } from './components/characters/characters.component';
-import { RickandmortyComponent } from './components/rickandmorty/rickandmorty.component';
+import { RickandmortyListComponent } from './components/rickandmorty/rickandmorty-list/rickandmorty-list.component';
 
 const routes: Routes = [
   {
@@ -15,7 +15,7 @@ const routes: Routes = [
   },
   {
     path : 'rickandmorty',
-    component : RickandmortyComponent
+    component : RickandmortyListComponent
   }
 ];
 
