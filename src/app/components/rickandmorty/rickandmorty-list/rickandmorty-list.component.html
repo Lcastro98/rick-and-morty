@@ -4,26 +4,22 @@
         #inputSearch
         autofocus
         type="text"
-        class="form-control-lg"
+        class="form-control"
         placeholder="Busca un personaje"
         (keyup)="onSearch(inputSearch.value)"
         />
     </div>
     <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let character of characters">
-        <div class="card">
+        <div class="card" [routerLink]="['/rickandmorty-details', character.id]">
             <div class="image">
-                <a [routerLink]="['/rickandmorty-details', character.id]">
-                    <img 
-                    [src]="character.image" 
-                    [alt]="character.name"
-                    class="card-img-top">
-                </a>
+                <img 
+                [src]="character.image" 
+                [alt]="character.name"
+                class="card-img-top">
             </div>
             <div class="card-inner">
                 <div class="header">
-                    <a [routerLink]="['/rickandmorty-details', character.id]">
-                        <h2>{{character.name | slice: 0:15}}</h2>
-                    </a>
+                    <h2 [routerLink]="['/rickandmorty-details', character.id]">{{character.name | slice: 0:15}}</h2>
                     <h4 class="text-muted">{{character.gender}}</h4>
                     <small class="text-muted">{{character.created | date}}</small>
                 </div>
