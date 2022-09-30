@@ -1,9 +1,29 @@
-<input
-      #inputSearch
+<div class="container">
+<div class="input-group mb-3">
+  <input
+      #value
       autofocus
       type="text"
-      class="form-control-lg"
-      placeholder="Search......"
-      (keyup)="onSearch(inputSearch.value)"
+      class="form-control"
+      placeholder="Añade un personaje"
     />
+    <button class="btn btn-outline-secondary" type="button" id="button-addon2" (click)="addCharacter(value.value)">Añadir</button>
+</div>
+</div>
+<div class="container">
+  <div class="row justify-content-center mt-3">
+    <table class="table table-striped" >
+      <thead>
+        <tr>
+          <th scope="col">Nombre</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        <tr  *ngFor="let character of newArray">
+          <td>{{character}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 

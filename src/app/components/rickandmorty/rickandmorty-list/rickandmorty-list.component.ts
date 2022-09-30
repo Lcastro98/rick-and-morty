@@ -98,4 +98,14 @@ export class RickandmortyListComponent implements OnInit {
         }
       })
     }
+    
+    onSearch(value: string) {
+      console.log("Buscar ->", value);
+      
+      if (value && value.length > 3) {
+        this.router.navigate(['/rickandmorty-list'], {
+          queryParams: { q: value },
+        });
+      }
+    }
 }
